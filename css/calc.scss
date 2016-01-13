@@ -1,0 +1,66 @@
+$basicBorder: solid 2px black;
+$displayFontSize: 20px;
+$memoryFontSize: 14px;
+$calcWidth: 420px;
+$calcBackgroundColor: #808080;
+$btnColor: blue;
+$btnBackgroundColor: #c8c8c8;
+$btnNumberBackgroundColor: #ecebeb;
+$btnBackgroundColorHover: #a0a0a0;
+$btnHeight: 50px;
+$btnEqualHeight: ($btnHeight * 2);
+
+.calculator {
+  width: $calcWidth;
+  border: $basicBorder;
+  border-radius: 10px;
+  background-color: $calcBackgroundColor;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -30px 0 -30px;
+}
+
+.result {
+  border: $basicBorder;
+}
+
+.display {
+  border: $basicBorder;
+  font-size: $displayFontSize;
+  height: ($displayFontSize * 2.5);
+  color: black;
+  text-align: right;
+}
+
+.memory {
+  border: $basicBorder;
+  font-size: $memoryFontSize;
+  height: ($memoryFontSize * 2.5);
+  text-align: left;
+}
+
+.btn {
+  border: $basicBorder;
+  height: $btnHeight;
+  color: $btnColor;
+  background-color: $btnBackgroundColor;
+  font-size: 20px;
+  line-height: ($btnHeight / 2);
+  &:hover {
+    background-color: $btnBackgroundColorHover;
+    border: $basicBorder;
+  }
+  &.btnNum {
+    background-color: $btnNumberBackgroundColor;
+    &:hover {
+      background-color: $btnBackgroundColorHover;
+      border: $basicBorder;
+    }
+  }
+  &.btnEqual {
+    float: right;
+    height: $btnEqualHeight;
+  }
+}
